@@ -1,0 +1,32 @@
+create angular project - ng new projectname
+run angular - ng s -o
+add bootstrap and font owsome cdn, google fonts
+lazy loading - its a process of loading components and modules
+             -  its improves application load time speed
+ng g m products --route products --module app.module
+create a component should lazy loaded in the products module
+ ->all-products = ng g c products/all-product
+   ->cart        = ng g c products/cart
+   ->wish-list   = ng g c products/wish-list
+
+   then came to ts page of all product and copt the path name and paste it on products- routing page..because it  (all-product)is the center page...
+add <router-outlet> in app.component.htnl for pages routing
+then tell to app-routing.module to redirect path...means redirct to (products)..
+start bootsrap shop homepage for header footer git in chrome
+
+designing of components
+create angular services for API call...ng g s products/api
+import httpclientmodule in product module
+
+integration
+
+designing of wishlist and cart
+
+search for the products  ng g p product/pipes/filter
+
+
+they both are strutural directiives..change strutures of front page elements  - ngif and ngfor
+
+for create a connection between cart and products  ng g s products/cart
+
+subscribe use in frontend iinstead of .then in js backend..in angular observable....in js promise.so in angular observablle instead of promise..subscribe from observable ...

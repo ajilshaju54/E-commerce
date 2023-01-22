@@ -1,0 +1,55 @@
+<!-- cart with empty -->
+<div class="p2" *ngIf="cartItems.length==0">
+<div class="container border border-success m-5">
+  
+    <div class="row mt-5">
+        <div class="col text-center m-5">
+            <img src="https://cdn.dribbble.com/users/687236/screenshots/5838300/media/8a127500b239e5430047acd40dadfed5.png" height="250px" width="300px" alt="" >
+        <h3>Your Cart is Empty</h3>
+        <a routerLink="/" class="btn btn-outline-primary">Shot Now</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- cart with content -->
+<div class="container" *ngIf="cartItems.length!=0">
+    <div class="p6">
+    <div class="row">
+        <div class="col">
+            <table class="table border-dark border m-5"> 
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Description</th>
+                        <th>Action</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of cartItems let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{product.title}}</td>
+                        <td><img [src]="product.image" alt=   image height=300px width="100px"> </td>
+                        <td>  {{product.Description}}</td>
+                        <td> $ {{product.price}}</td>
+                       
+                        <td><i class="fa fa-trash text-danger"></i> </td>
+                      
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="float: right;" class="mb-5">
+                <button class="btn btn-danger">Empty Cart</button> &nbsp;
+                <button class="btn btn-primary">Shot More</button>  &nbsp;
+                <button class="btn btn-success"> Check Out</button>  &nbsp;
+                <b>Grand Total:500</b>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
